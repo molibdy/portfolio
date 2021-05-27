@@ -1,0 +1,75 @@
+$color-main: rgb(135, 96, 187) ;
+$color-text:rgb(18, 4, 36) ;
+$color-hover:rgb(0, 0, 0) ;
+$font: fantasy;
+
+@mixin row($justify){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin col($justify, $align){
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.text{
+    font-family: $font;
+    color: $color-text;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text:hover{
+    color: $color-hover;
+    scale: 1.1;
+}
+
+
+.container{
+    @include col(center,center);
+    width: 100%;
+}
+
+.content{
+    @include row(center);
+    height: 60vh;
+}
+
+.picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-right: 20px;
+    img{
+        width: 200px;
+        height: auto;
+    }
+}
+
+.info-container{
+    @include col(center,center);
+    font-family: $font;
+    color: $color-text;
+    .title{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .subtitle{
+        font-size: 30px;
+    }
+}
+
+.links{
+    @include row(space-evenly);
+    width: 100%;
+    div{
+        @extend .text;
+    }
+}
