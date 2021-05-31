@@ -2,19 +2,17 @@
     <div class="nav-bar-content">
         <div class="nav-title" routerLink="../home">Isabel Sarmiento</div>
         <div class="nav-menu">
-            <div routerLink="../portfolio">Portfolio</div>
-            <div routerLink="../resume">Resume</div>
-            <div routerLink="../contact">Contact</div>
-            <div routerLink="../about">About me</div>
+            <div routerLink="../portfolio" [routerLinkActive]="['active']">Portfolio</div>
+            <div routerLink="../resume" [routerLinkActive]="['active']">Resume</div>
+            <div routerLink="../about" [routerLinkActive]="['active']">About me</div>
         </div>
         <div class="burger-button" (click)="showMenu ? showMenu=false : showMenu=true">
             <i class="fas fa-bars"></i>
         </div>
         <div class="burger-menu" *ngIf="showMenu">
-            <div class="menu-item" routerLink="../portfolio" (click)="showMenu=false">Portfolio</div>
-            <div class="menu-item" routerLink="../resume" (click)="showMenu=false">Resume</div>
-            <div class="menu-item" routerLink="../contact" (click)="showMenu=false">Contact</div>
-            <div class="menu-item" routerLink="../about" (click)="showMenu=false">About me</div>
+            <div class="menu-item" routerLink="../portfolio" (click)="showMenu=false" [routerLinkActive]="['active']">Portfolio</div>
+            <div class="menu-item" routerLink="../resume" (click)="showMenu=false" [routerLinkActive]="['active']">Resume</div>
+            <div class="menu-item" routerLink="../about" (click)="showMenu=false" [routerLinkActive]="['active']">About me</div>
         </div>
     </div>
 

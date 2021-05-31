@@ -1,7 +1,8 @@
-$color-main: rgb(135, 96, 187) ;
-$color-text:rgb(18, 4, 36) ;
-$color-hover:rgb(0, 0, 0) ;
-$font: fantasy;
+$color-main: rgb(189, 175, 226) ;
+$color-text:rgb(64, 18, 124) ;
+$color-hover:rgb(25, 3, 54) ;
+$color-icon: rgb(64, 18, 124) ;
+$font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 @mixin row($justify){
     display: flex;
@@ -29,11 +30,16 @@ $font: fantasy;
     scale: 1.1;
 }
 
-
-.container{
-    @include col(center,center);
-    width: 100%;
+.icon{
+    color: $color-icon;
+    font-size: 50px;
+    cursor: pointer;
 }
+.icon:hover{
+    color: $color-hover;
+    scale: 1.1;
+}
+
 
 .content{
     @include row(center);
@@ -42,6 +48,7 @@ $font: fantasy;
 
 .picture{
     width: 200px;
+    min-width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow-y: hidden;
@@ -58,7 +65,7 @@ $font: fantasy;
     font-family: $font;
     color: $color-text;
     .title{
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 600;
     }
     .subtitle{
@@ -68,8 +75,8 @@ $font: fantasy;
 
 .links{
     @include row(space-evenly);
-    width: 100%;
-    div{
-        @extend .text;
+    width: 60%;
+    a{
+        @extend .icon;
     }
 }

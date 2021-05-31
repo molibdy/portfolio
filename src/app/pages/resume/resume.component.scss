@@ -1,0 +1,101 @@
+$color-main: rgb(189, 175, 226) ;
+$color-text:rgb(64, 18, 124) ;
+$color-subtext:rgba(25, 3, 54, 0.692) ;
+$color-hover:rgb(25, 3, 54) ;
+$color-icon: rgb(64, 18, 124) ;
+$font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+@mixin row($justify){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin col($justify, $align){
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.section-container{
+    @include col(flex-start,flex-start);
+    width: 90%;
+    padding:30px;
+}
+.type{
+    color: $color-main;
+    letter-spacing: 3px;
+    font-size: 30px;
+    margin-left: 10px
+}
+
+.section{
+    @include row(center);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.wrapper{
+    max-height: 500px;
+    border-radius: 6px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y:hidden;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+
+.wrap-item{
+    @include col(flex-start,flex-start);
+    height: 350px;
+    min-width: 600px;
+    border-radius: 6px;
+    margin-right: 6px;
+    background-color: white;
+    padding: 30px;
+    overflow-y: scroll;
+    box-shadow: 3px 0px 6px rgba(109, 87, 138, 0.253) ;
+    color: $color-subtext;
+}
+
+
+
+.title{
+    font-size: 22px;
+    font-weight: 500;
+    color: $color-text;
+    line-height: 30px;
+    margin-bottom: 4px;
+}
+
+.date{
+    font-size: 16px;
+    font-style: italic;
+    color: $color-main;
+}
+
+.place{
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-hover;
+    line-height: 30px;
+}
+.location{
+    display: none;
+}
+
+
+
+@media screen and (max-width:740px){
+    .wrap-item{
+        @include col(flex-start,flex-start);
+        min-height: 350px;
+        height: auto;
+        min-width: 80vw;
+        max-width: 80vw;
+    }
+}
