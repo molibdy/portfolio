@@ -1,0 +1,40 @@
+@import "../resume/resume.component.scss";
+
+
+.picture{
+    @include row(center);
+    width: 350px;
+    min-width: 350px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-right: 20px;
+    border-radius: 15px;
+    img{
+        width: 400px;
+        height: auto;
+        border-radius: 15px;
+    }
+}
+
+.pic-container{
+    @include row(center);
+    height: 250px;
+    margin-top:20px
+}
+
+
+.links{
+    @include col(space-evenly,flex-start);
+    height:inherit;
+}
+
+.icon{
+    color: $color-icon;
+    font-size: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icon:hover{
+    color: $color-hover;
+    scale: 1.1;
+}

@@ -2,7 +2,7 @@
     <div class="nav-bar-content">
         <div class="nav-title" routerLink="../home">Isabel Sarmiento</div>
         <div class="nav-menu">
-            <div routerLink="../portfolio" [routerLinkActive]="['active']">Portfolio</div>
+            <div routerLink="../portfolio" [routerLinkActive]="['active']">My projects</div>
             <div routerLink="../resume" [routerLinkActive]="['active']">Resume</div>
             <div routerLink="../about" [routerLinkActive]="['active']">About me</div>
         </div>
@@ -10,7 +10,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="burger-menu" *ngIf="showMenu">
-            <div class="menu-item" routerLink="../portfolio" (click)="showMenu=false" [routerLinkActive]="['active']">Portfolio</div>
+            <div class="menu-item" routerLink="../portfolio" (click)="showMenu=false" [routerLinkActive]="['active']">My projects</div>
             <div class="menu-item" routerLink="../resume" (click)="showMenu=false" [routerLinkActive]="['active']">Resume</div>
             <div class="menu-item" routerLink="../about" (click)="showMenu=false" [routerLinkActive]="['active']">About me</div>
         </div>
